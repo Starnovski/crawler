@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+  {{ alert }}
+  <form method="POST">{% csrf_token %}
+    <table>
+      {{ form.as_p }}
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+  {{data}}
+{% endblock %}
